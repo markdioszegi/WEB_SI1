@@ -1,0 +1,178 @@
+*, *:before, *:after
+{
+    box-sizing: inherit;
+} 
+
+body, html 
+{
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: black;
+    line-height: 1.5;
+    margin: 0;
+    font-family: "Verdana", sans-serif;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 36px;
+}
+
+div
+{
+    display: block;
+}
+
+.logo-big
+{
+    width: 160px;
+    height: 160px;
+}
+
+.logo-small
+{
+    width: 60px;
+    height: 60px;
+}
+
+.logo-small:hover
+{
+    cursor: pointer;
+}
+
+.bgimg
+{
+    background-image: url("../img/smoothie.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.77;
+    min-height: 100%;
+}
+
+.content
+{
+    max-width: 900px;
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.row
+{
+    padding: 64px 64px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer
+{
+    background-color: rgb(53, 53, 53);
+    /*  min-height: 10%; */
+    padding: 60px 60px;
+    position: relative;
+}
+
+.center
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.display-middle
+{
+    letter-spacing: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(134, 185, 58);
+    padding: 12px 24px;
+}
+
+.opacity-min
+{
+    opacity: 0.8;
+}
+
+.navbar
+{
+    color:white;
+    overflow: hidden;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    align-items: center;
+    transition: 200ms;
+}
+
+.navbar-scrolled
+{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+    background-color: white;
+    color: black;
+}
+
+.nav-item
+{
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
+
+.nav-btn
+{
+    border: none;
+    display: inline-block;
+    padding: 12px 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 200ms;
+}
+
+.nav-btn:hover
+{
+    background-color: rgb(134, 185, 58);
+}
+
+.align-left
+{
+    text-align: left;
+}
+
+.animated
+{
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.fade-in-down
+{
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown 
+{
+    0% {
+       opacity: 0;
+       transform: translateY(-30px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+}
