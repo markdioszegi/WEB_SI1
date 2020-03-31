@@ -39,6 +39,7 @@ div
 .logo-small:hover
 {
     cursor: pointer;
+    opacity: 0.6;
 }
 
 .bgimg
@@ -55,8 +56,8 @@ div
 .content
 {
     max-width: 900px;
-    padding-top: 64px!important;
-    padding-bottom: 64px!important;
+    padding-top: 32px!important;
+    padding-bottom: 32px!important;
     padding-left: 24px;
     padding-right: 24px;
 }
@@ -149,9 +150,79 @@ div
     background-color: rgb(134, 185, 58);
 }
 
+input[type=email]
+{
+    width: 50%;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 2px;
+    transition: 1000ms;
+}
+
+.btn
+{
+    width: 92px;
+    height: 48px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+    background-color: rgb(134, 185, 58);
+    transition: 200ms;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color: black;
+    color: rgb(134, 185, 58);
+}
+
 .align-left
 {
     text-align: left;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+table
+{
+    border: solid 2px black;
+    border-radius: 2px;
+    border-spacing: 0px;
+}
+
+.tr-head-blue
+{
+    background-color: rgb(117,194,198);
+}
+
+.tr-head-green
+{
+    background-color: rgb(120,197,62);
+}
+
+th, td
+{
+    padding: 16px;
+    text-align: center;
+}
+
+td
+{
+    font-weight: 100;
+}
+
+tr
+{
+    font-weight: bold;
 }
 
 .animated

@@ -1,27 +1,29 @@
+@model FormModel
 @{
-
+    ViewData["Title"] = "Home Page";
 }
 
 <html> 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Our Epic Product</title>
         <link rel="stylesheet" href="~/css/index.css">
         <script src="~/js/index.js"></script>
     </head>
     <body>
-        @* NAVBAR *@
+        <!--NAVBAR-->
         <div id="myNavbar" class="navbar">
-            <label href="#" class="nav-item nav-btn">HOME</label>
-            <label href="#" class="nav-item nav-btn">CONTACT</label>
+            <a href="#" class="nav-item nav-btn unselectable">HOME</a>
+            <a href="#theproduct" class="nav-item nav-btn unselectable">THE PRODUCT</a>
+            <a href="#preorder" class="nav-item nav-btn unselectable">PRE-ORDER</a>
         </div>
-        <div class="bgimg">
+        <!--NAVBAR END-->
+        <div id="home" class="bgimg">
             <div class="display-middle">
                 <h2>WELCOME TO THE SITE</h2>
             </div>
         </div>
-        <div class="content center fade-in-down animated">
+        <div id="theproduct" class="content center fade-in-down animated">
             <h1>A REVOLUTIONARY PRODUCT</h1>
             <h4>The future is near and you don't have to go any farther.
                 Consuming this product everyday you can easily take in the necessary nutrients that your body needs!</h4>
@@ -35,13 +37,45 @@
                 <img class="logo-big" src="/img/lactosefree.png">
                 <img class="logo-big" src="/img/glutenfree.png">
             </div>
+            <!-- TABLE START-->
+            <h1>NUTRITION FACTS</h1>
+            <table class="center">
+                <tr class="tr-head-blue">
+                    <th colspan="6">Amount / 100 g</th>
+                </tr>
+                <tr class="tr-head-green">
+                    <th>Calories</th>
+                    <th>Fat</th>
+                    <th>Carbohydrate</th>
+                    <th>Sugar</th>
+                    <th>Fiber</th>
+                    <th>Protein</th>
+                </tr>
+                <tr>
+                    <td>267 kcal</td>
+                    <td>17.2 g</td>
+                    <td>45.4 g</td>
+                    <td>44.3 g</td>
+                    <td>0.3 g</td>
+                    <td><0.1 g</td>
+                </tr>
+            </table>
+            <!-- TABLE END-->
         </div>
-        <form action="">
-
-        </form>
+        <div id="preorder" class="content center fade-in-down animated">
+            <h1>PRE-ORDER NOW</h1>
+            <p>What are you waiting for?</p>
+            @using (Html.BeginForm("PreOrderForm", "Home", FormMethod.Post, new { autocomplete = "on" } ))
+            {
+            @* <form id="preorder-form" method="POST" autocomplete="on"> *@
+                <p><input type="email" name="email" placeholder="Your email address..." required></p>
+                <button class="btn">Submit</button>
+            @* </form> *@
+            }
+        </div>
         <footer>
             <div class="footer">
-                <a href="https://www.instagram.com/__mrkdszg__official/"><img class="logo-small" src="/img/insta.png" alt="Our instagram"></a>
+                <a href="https://www.instagram.com/explore/tags/vegan/"><img class="logo-small" src="/img/insta.png" alt="Our instagram"></a>
                 <a href="http://codecool.com"><img class="logo-small" src="/img/codecool.png" alt="Our lair"></a>
             </div>
         </footer>
